@@ -1,4 +1,4 @@
-const CACHE_NAME = 'glasswave-v1';
+const CACHE_NAME = 'glasswave-v2';
 const APP_SHELL = [
   './',
   './index.html',
