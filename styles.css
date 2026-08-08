@@ -32,6 +32,9 @@
 
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-bottom-raw: max(0px, env(safe-area-inset-bottom, 0px));
+  --safe-bottom-legacy: constant(safe-area-inset-bottom, 0px);
+  --nav-offset: calc(80px + max(var(--safe-bottom-raw), var(--safe-bottom-legacy)));
 }
 
 /* ── Reset ── */
@@ -44,12 +47,19 @@ html {
 }
 
 html, body {
+  width: 100%;
   min-height: 100%;
   min-height: 100dvh;
+  min-height: 100svh;
+  height: 100%;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   overflow: hidden;
+}
+
+html {
+  background: #000;
 }
 
 body {
@@ -57,8 +67,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(12px + var(--safe-top)) 20px calc(90px + var(--safe-bottom));
+  padding: calc(12px + var(--safe-top)) 20px 0;
   background: #000;
+  overscroll-behavior: none;
 }
 
 h1, h2, h3, h4, p { margin: 0; }
@@ -161,11 +172,14 @@ button { cursor: pointer; border: 0; background: none; color: inherit; }
   position: relative;
   z-index: 1;
   width: min(430px, 100%);
-  max-height: calc(100dvh - 40px - var(--safe-top) - var(--safe-bottom));
+  height: calc(100dvh - (var(--safe-top) + var(--safe-bottom) + 8px));
+  height: calc(100svh - (var(--safe-top) + var(--safe-bottom) + 8px));
+  max-height: calc(100dvh - 14px - var(--safe-top) - var(--safe-bottom));
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   animation: fadeInUp 0.8s var(--ease-out) both;
+  padding-bottom: calc(72px + var(--safe-bottom-raw));
 }
 
 .tab-panel.hidden {
@@ -175,7 +189,7 @@ button { cursor: pointer; border: 0; background: none; color: inherit; }
 .bottom-tabbar {
   position: fixed;
   left: 50%;
-  bottom: max(16px, calc(18px + var(--safe-bottom)));
+  bottom: calc(12px + var(--safe-bottom-raw));
   transform: translateX(-50%);
   z-index: 30;
   display: flex;
@@ -183,6 +197,7 @@ button { cursor: pointer; border: 0; background: none; color: inherit; }
   gap: 8px;
   width: min(92vw, 360px);
   padding: 8px;
+  padding-bottom: max(8px, calc(8px + var(--safe-bottom-raw)));
   border-radius: 26px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(14, 15, 18, 0.7);
@@ -301,7 +316,8 @@ button { cursor: pointer; border: 0; background: none; color: inherit; }
   flex-direction: column;
   gap: 10px;
   min-width: 0;
-  padding: 0 6px;
+  padding: 0 6px calc(72px + var(--safe-bottom-raw));
+  overflow: hidden;
 }
 
 /* ── Hero Card ── */
@@ -633,7 +649,7 @@ button { cursor: pointer; border: 0; background: none; color: inherit; }
 .playlist-panel {
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  padding: 24px 24px calc(72px + var(--safe-bottom-raw));
   max-height: calc(100dvh - 40px - var(--safe-top) - var(--safe-bottom));
   overflow: hidden;
 }
