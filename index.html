@@ -27,14 +27,7 @@
       <!-- ════════ MAIN PANEL ════════ -->
       <main class="main-panel tab-panel active" id="mainPanel" data-tab-panel="music">
 
-        <!-- Top Bar -->
-        <header class="topbar">
-          <div class="topbar-actions" style="margin-left: auto;">
-            <div class="avatar" id="avatar">JV</div>
-          </div>
-        </header>
-
-        <!-- Hero Now Playing -->
+          <!-- Hero Now Playing -->
         <section class="hero-card glass-card" id="heroCard">
           <div class="hero-glow" aria-hidden="true"></div>
           <div class="hero-content">
@@ -132,7 +125,7 @@
       </button>
     </nav>
 
-    <audio id="audioPlayer" preload="metadata"></audio>
+    <audio id="audioPlayer" preload="auto" playsinline webkit-playsinline></audio>
     <script src="script.js"></script>
   </body>
 </html>
