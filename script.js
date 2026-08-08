@@ -43,25 +43,7 @@ const ballPalette = [
 ];
 
 // ── Track Library ──
-const defaultTracks = [
-  { id: 1, title: 'Midnight Rain', artist: 'Lo-Fi Chillers', album: 'Rainy Days', duration: '06:12', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', cover: null },
-  { id: 2, title: 'Jazz Cafe', artist: 'Smooth Keys', album: 'Coffee & Chill', duration: '07:05', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', cover: null },
-  { id: 3, title: 'Autumn Piano', artist: 'Acoustic Soul', album: 'Instrumentals', duration: '05:44', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3', cover: null },
-  { id: 4, title: 'Night Walk', artist: 'Lofi Beats', album: 'City Lights', duration: '05:02', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3', cover: null },
-  { id: 5, title: 'Soft Thunder', artist: 'Nature Sounds', album: 'Stormy Night', duration: '06:42', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3', cover: null },
-  { id: 6, title: 'Vintage Vinyl', artist: 'Jazz Quartet', album: 'Classic Cuts', duration: '04:30', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3', cover: null },
-  { id: 7, title: 'Morning Dew', artist: 'Chillhop Music', album: 'Dawn', duration: '05:11', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3', cover: null },
-  { id: 8, title: 'Silent Snow', artist: 'Piano Works', album: 'Winter', duration: '07:33', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3', cover: null },
-  { id: 9, title: 'Urban Rain', artist: 'Lofi Vibes', album: 'Streets', duration: '08:21', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3', cover: null },
-  { id: 10, title: 'Late Night Keys', artist: 'Jazz Bar', album: 'After Hours', duration: '06:55', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3', cover: null },
-  { id: 11, title: 'Ocean Waves', artist: 'Nature Calling', album: 'Sea Breeze', duration: '06:05', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3', cover: null },
-  { id: 12, title: 'Study Session', artist: 'Lofi Beats', album: 'Focus', duration: '07:08', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3', cover: null },
-  { id: 13, title: 'Distant Sax', artist: 'Smooth Jazz', album: 'Noire', duration: '06:17', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3', cover: null },
-  { id: 14, title: 'Cozy Fireplace', artist: 'Acoustic Strings', album: 'Warmth', duration: '05:22', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3', cover: null },
-  { id: 15, title: 'Neon Rain', artist: 'Synthwave Lofi', album: 'Cyber City', duration: '06:58', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3', cover: null },
-  { id: 16, title: 'Acoustic Dawn', artist: 'Guitar Moods', album: 'Sunrise', duration: '07:25', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3', cover: null },
-  { id: 17, title: 'Deep Focus', artist: 'Ambient Sounds', album: 'Mindfulness', duration: '07:11', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3', cover: null },
-];
+const defaultTracks = [];
 
 // ── App State ──
 const state = {
@@ -474,18 +456,64 @@ function attachListeners() {
 // INITIALIZATION
 // ═══════════════════════════════
 
-function init() {
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) return;
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((error) => {
+      console.warn('Service Worker não registrado:', error);
+    });
+  });
+}
+
+async function loadDefaultTracks() {
+  try {
+    const response = await fetch('./musicas/playlist.json');
+    if (!response.ok) throw new Error('Playlist não encontrada');
+
+    const tracks = await response.json();
+    state.tracks = tracks.map((track, index) => ({
+      ...track,
+      id: track.id ?? index + 1,
+      duration: track.duration || '00:00',
+      cover: track.cover ?? null,
+    }));
+
+    if (state.tracks.length) {
+      updateNowPlaying(state.tracks[0]);
+      renderTrackList();
+      return;
+    }
+  } catch (error) {
+    console.warn('Erro ao carregar a playlist local:', error);
+  }
+
+  state.tracks = [{
+    id: 1,
+    title: 'Música local',
+    artist: 'Biblioteca',
+    album: 'Sem lista',
+    duration: '00:00',
+    src: '',
+    cover: null,
+  }];
+
+  updateNowPlaying(state.tracks[0]);
+  renderTrackList();
+}
+
+async function init() {
   audioPlayer.volume = Number(volumeBar.value) / 100;
   volumeFill.style.width = `${volumeBar.value}%`;
   progressFill.style.width = '0%';
   progressThumb.style.left = '0%';
 
+  registerServiceWorker();
   createAmbientBalls();
   createParticles();
   animateParticles();
-  updateNowPlaying(state.tracks[0]);
-  renderTrackList();
   attachListeners();
+  await loadDefaultTracks();
   updatePlayButton();
 }
 

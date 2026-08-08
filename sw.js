@@ -5,6 +5,7 @@ const APP_SHELL = [
   './styles.css',
   './script.js',
   './manifest.json',
+  './musicas/playlist.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-icon.png'

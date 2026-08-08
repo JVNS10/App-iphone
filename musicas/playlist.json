@@ -1,0 +1,686 @@
+[
+  {
+    "id": 1,
+    "title": "A Place to Stay",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/A Place to Stay_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 2,
+    "title": "Amber",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Amber_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 3,
+    "title": "Avalanche",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Avalanche_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 4,
+    "title": "Ayla",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Ayla_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 5,
+    "title": "Before It's Over",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Before It's Over_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 6,
+    "title": "Brumous",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Brumous_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 7,
+    "title": "Calla Lily",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Calla Lily_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 8,
+    "title": "Coral",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Coral_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 9,
+    "title": "Currents",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Currents_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 10,
+    "title": "Darlington - Empty Words",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Darlington - Empty Words (SPOTISAVER).mp3",
+    "cover": null
+  },
+  {
+    "id": 11,
+    "title": "Firefly City",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Firefly City_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 12,
+    "title": "Halo",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Halo_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 13,
+    "title": "Hammock",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Hammock_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 14,
+    "title": "Heartbeat",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Heartbeat_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 15,
+    "title": "Hold On",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Hold On_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 16,
+    "title": "Iris",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Iris_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 17,
+    "title": "Memories",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Memories_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 18,
+    "title": "Mile 43",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Mile 43_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 19,
+    "title": "Neon Prism",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Neon Prism_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 20,
+    "title": "New Light",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/New Light_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 21,
+    "title": "Night Veranda",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Night Veranda_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 22,
+    "title": "Nox Petal",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Nox Petal_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 23,
+    "title": "Pastel Sky",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Pastel Sky_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 24,
+    "title": "Patience",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Patience_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 25,
+    "title": "Promise",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Promise_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 26,
+    "title": "Quiet Days",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Quiet Days_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 27,
+    "title": "Return",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Return_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 28,
+    "title": "Seasides",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Seasides_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 29,
+    "title": "Seasons",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Seasons_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 30,
+    "title": "Simpler Times",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Simpler Times_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 31,
+    "title": "Sky Wires",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Sky Wires_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 32,
+    "title": "Slick",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Slick_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 33,
+    "title": "So Long Sailor",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/So Long Sailor_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 34,
+    "title": "Strange Ways",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Strange Ways_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 35,
+    "title": "Sunday Morning",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Sunday Morning_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 36,
+    "title": "Sunflowers",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Sunflowers_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 37,
+    "title": "Tender Tuesday",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Tender Tuesday_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 38,
+    "title": "Timeless",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Timeless_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 39,
+    "title": "Tiny Paws",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Tiny Paws_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 40,
+    "title": "Transient",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Transient_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 41,
+    "title": "Twinkling Echoes of Night",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Twinkling Echoes of Night_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 42,
+    "title": "Twofortyfive on a Tuesday",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Twofortyfive on a Tuesday_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 43,
+    "title": "Warm Static",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/Warm Static_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 44,
+    "title": "White",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/White_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 45,
+    "title": "become",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/become_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 46,
+    "title": "bole",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/bole_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 47,
+    "title": "calm before",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/calm before_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 48,
+    "title": "compatible dreams",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/compatible dreams_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 49,
+    "title": "decades",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/decades_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 50,
+    "title": "ember",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/ember_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 51,
+    "title": "embrace",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/embrace_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 52,
+    "title": "everything goes on",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/everything goes on_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 53,
+    "title": "florence",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/florence_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 54,
+    "title": "florescence",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/florescence_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 55,
+    "title": "glow",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/glow_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 56,
+    "title": "hold on",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/hold on_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 57,
+    "title": "i see you",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/i see you_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 58,
+    "title": "in the reeds",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/in the reeds_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 59,
+    "title": "island",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/island_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 60,
+    "title": "just for a while",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/just for a while_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 61,
+    "title": "late june",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/late june_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 62,
+    "title": "leica",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/leica_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 63,
+    "title": "let's move on",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/let's move on_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 64,
+    "title": "luna",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/luna_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 65,
+    "title": "marina",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/marina_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 66,
+    "title": "morning brew",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/morning brew_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 67,
+    "title": "my favourite shirt",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/my favourite shirt_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 68,
+    "title": "ocean air",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/ocean air_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 69,
+    "title": "open door",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/open door_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 70,
+    "title": "open meadows",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/open meadows_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 71,
+    "title": "pocket garden",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/pocket garden_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 72,
+    "title": "receipt",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/receipt_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 73,
+    "title": "remnants",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/remnants_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 74,
+    "title": "summer postcards",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/summer postcards_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 75,
+    "title": "things we see",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/things we see_spotdown.org.mp3",
+    "cover": null
+  },
+  {
+    "id": 76,
+    "title": "white moon",
+    "artist": "Local library",
+    "album": "Músicas locais",
+    "duration": "00:00",
+    "src": "./musicas/white moon_spotdown.org.mp3",
+    "cover": null
+  }
+]
