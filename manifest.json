@@ -4,10 +4,12 @@
   "description": "Player de música minimalista em estilo glassmorphism para iPhone.",
   "start_url": ".",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
   "background_color": "#07090d",
   "theme_color": "#07090d",
   "orientation": "portrait",
   "scope": ".",
+  "id": "/",
   "icons": [
     {
       "src": "icons/icon-192.png",
