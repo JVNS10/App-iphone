@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="GlassWave — Player de música com design premium glassmorphism." />
+    <title>GlassWave</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- Ambient Background -->
+    <div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+    <div class="particle-field" id="particleField" aria-hidden="true"></div>
+
+    <div class="app-shell">
+
+      <!-- ════════ MAIN PANEL ════════ -->
+      <main class="main-panel tab-panel active" id="mainPanel" data-tab-panel="music">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+          <div class="topbar-actions" style="margin-left: auto;">
+            <div class="avatar" id="avatar">JV</div>
+          </div>
+        </header>
+
+        <!-- Hero Now Playing -->
+        <section class="hero-card glass-card" id="heroCard">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="hero-content">
+            <div class="hero-info">
+              <p class="eyebrow">Tocando agora</p>
+              <h2 id="nowTitle" class="hero-title">Neon Drift</h2>
+              <p class="hero-artist" id="nowArtist">Aural Bloom</p>
+              <p class="hero-album" id="nowAlbum">Glass Hours</p>
+            </div>
+            <div class="hero-cover-wrap">
+              <div class="cover-art" id="coverArt">
+                <div class="cover-inner">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/><circle cx="18" cy="16" r="3" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/></svg>
+                </div>
+                <div class="cover-reflection"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Player Controls -->
+        <section class="player-card glass-card" id="playerCard">
+          <div class="progress-section">
+            <div class="time-row">
+              <span id="currentTime" class="time-label">00:00</span>
+              <span id="totalTime" class="time-label">03:24</span>
+            </div>
+            <div class="progress-track" id="progressTrack">
+              <div class="progress-fill" id="progressFill"></div>
+              <div class="progress-thumb" id="progressThumb"></div>
+              <input id="progressBar" type="range" min="0" max="100" value="0" aria-label="Progresso da faixa" />
+            </div>
+          </div>
+
+          <div class="controls-row">
+            <button class="ctrl-btn" id="prevButton" type="button" aria-label="Faixa anterior">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="19,20 9,12 19,4" fill="currentColor"/><line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <button class="play-btn" id="playButton" type="button" aria-label="Reproduzir ou pausar">
+              <svg class="play-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+              <svg class="pause-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="3" width="4" height="18" rx="1"/><rect x="15" y="3" width="4" height="18" rx="1"/></svg>
+            </button>
+            <button class="ctrl-btn" id="nextButton" type="button" aria-label="Próxima faixa">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="5,4 15,12 5,20" fill="currentColor"/><line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+
+          <div class="volume-section">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polygon points="11,5 6,9 2,9 2,15 6,15 11,19" fill="currentColor" opacity="0.7"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+            <div class="volume-track" id="volumeTrack">
+              <div class="volume-fill" id="volumeFill"></div>
+              <input id="volumeBar" type="range" min="0" max="100" value="70" aria-label="Volume" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ════════ PLAYLIST PANEL ════════ -->
+      <aside class="playlist-panel glass-card tab-panel hidden" id="playlistPanel" data-tab-panel="library">
+        <div class="playlist-header">
+          <div>
+            <p class="eyebrow">Playlist</p>
+            <h3>Sua Biblioteca</h3>
+          </div>
+          <div class="library-actions">
+            <label class="upload-btn glass-pill" for="trackInput">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>Adicionar</span>
+            </label>
+            <span class="track-count" id="trackCount">6 faixas</span>
+          </div>
+        </div>
+        <div class="playlist-list" id="trackList" aria-live="polite"></div>
+      </aside>
+
+      <input id="trackInput" type="file" accept="audio/*" multiple hidden />
+
+    </div>
+
+    <nav class="bottom-tabbar" aria-label="Navegação principal">
+      <button class="tab-item active" type="button" data-tab="music" aria-label="Música">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+        <span>Música</span>
+      </button>
+      <button class="tab-item" type="button" data-tab="library" aria-label="Biblioteca">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M8 9h8M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span>Biblioteca</span>
+      </button>
+    </nav>
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
